@@ -1,6 +1,6 @@
 # Docusaurus Skills
 
-A collection of Claude Code skills for automating Docusaurus documentation setup with LLM-friendly output (llms.txt).
+Agent-agnostic skills for automating Docusaurus documentation setup with LLM-friendly output (llms.txt). Compatible with Claude Code, OpenAI Codex, and other AI coding agents.
 
 ## Skills
 
@@ -21,7 +21,7 @@ Sets up a complete Docusaurus documentation site from scratch, including:
 Everything from `docusaurus-docs`, plus automated CI/CD via GitHub Actions:
 
 - GitHub Actions workflows that detect code changes and trigger documentation updates
-- Support for two AI providers:
+- Support for multiple AI providers:
   - Claude Code (via `anthropics/claude-code-action@v1`)
   - OpenAI Codex (via `openai/codex-action@v1`)
 - Intelligent triggering — only rebuilds docs when relevant source files change
@@ -31,7 +31,7 @@ Everything from `docusaurus-docs`, plus automated CI/CD via GitHub Actions:
 
 ## Installation
 
-Copy the desired skill folder into your Claude Code skills directory:
+Copy the desired skill folder into your agent's skills directory:
 
 ```bash
 # For basic Docusaurus setup
@@ -43,7 +43,7 @@ cp -r skills/docusaurus-docs-cicd ~/.claude/skills/
 
 ## Usage
 
-Once installed, the skills are available as slash commands in Claude Code:
+Once installed, the skills are available as commands in your AI coding agent:
 
 - `/docusaurus-docs` — Set up a Docusaurus docs site with llms.txt support
 - `/docusaurus-docs-cicd` — Set up Docusaurus docs with automated CI/CD pipeline
@@ -51,7 +51,7 @@ Once installed, the skills are available as slash commands in Claude Code:
 ## Requirements
 
 - Node.js 18.0.0+
-- Claude Code CLI
+- An AI coding agent (Claude Code, OpenAI Codex, or similar)
 - GitHub repository (for CI/CD skill)
 - `ANTHROPIC_API_KEY` or `OPENAI_API_KEY` in GitHub Secrets (for CI/CD skill)
 
